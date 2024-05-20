@@ -27,14 +27,21 @@ https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table
 
 Four notebooks were created in order to analyze the data and based on that predict the dependent variable (ie whether or not a pump is functional):
 
-- 1. 00_data_understanding notebook 
+- 1. 00_data_understanding notebook. 
+
 	In this notebook, we imported the Training_set_values dataset. We cleaned the data, 	filled NaNs, explored patterns, and relationships among the variables. Lastly, we 	created graphs for numerical and categorical variables.
-- 2. 01_data_preprocessing
+
+- 2. 01_data_preprocessing.
+
 	In this notebook, we imported the data from notebook 00_data_understanding and we 	carried out some transformations on it in order to have a clean dataset to predict. 
 	For this, we applyied one hot encoder and target encoder to the categorical columns and 	scaled the numerical columns. 
-- 3. 02_model_creation
+
+- 3. 02_model_creation.
+
 	In this notebook, we imported the transformed data from notebook 01_data_preprocessing 	to create our models. We firstly did 2 baselines models (a Logistic Regression one and a 	Decission Tree Classifier). We then, we hypertuned the parameters for both models. And 	at the end we chose to go with the decision tree as our final model. 
-- 4. 03_predict
+
+- 4. 03_predict.
+
 	In this notebook, we used the Test_set_values dataset. We then applied to it the same 	transformations that were carried out in all the past notebooks. And we then applied the 	Decision Tree Classifier model from notebook 02_model_creation to do our final 	predictions on the SubmissionFormat dataset. 
 
 ## Conclusion
