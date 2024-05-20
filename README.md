@@ -14,10 +14,10 @@ Ultimately, the project aims to support sustainable water management practices t
 
 This project was done as part of a competition organized by Driven Data. Driven Data provided the following datasets:
 
-    SubmissionFormat
-    Test_set_values
-    Training_set_labels
-    Training_set_values
+- SubmissionFormat
+- Test_set_values
+- Training_set_labels
+- Training_set_values
 
 For more information about the competition, visit Driven Data:
 
@@ -25,41 +25,23 @@ https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table
 
 ## Methodology
 
-Four notebooks were created in order to analyze the data and based on that predict the dependent variable (ie whether or not the pump is functional):
+Four notebooks were created in order to analyze the data and based on that predict the dependent variable (ie whether or not a pump is functional):
 
-- 1. Descriptive Statistics
-- 2. First Question
-- 3. Second Question
-- 4. Third Question
-- 5. Results
+- 1. 00_data_understanding notebook 
+	In this notebook, we imported the Training_set_values dataset. We cleaned the data, 	filled NaNs, explored patterns, and relationships among the variables. Lastly, we 	created graphs for numerical and categorical variables.
+- 2. 01_data_preprocessing
+	In this notebook, we imported the data from notebook 00_data_understanding and we 	carried out some transformations on it in order to have a clean dataset to predict. 
+	For this, we applyied one hot encoder and target encoder to the categorical columns and 	scaled the numerical columns. 
+- 3. 02_model_creation
+	In this notebook, we imported the transformed data from notebook 01_data_preprocessing 	to create our models. We firstly did 2 baselines models (a Logistic Regression one and a 	Decission Tree Classifier). We then, we hypertuned the parameters for both models. And 	at the end we chose to go with the decision tree as our final model. 
+- 4. 03_predict
+	In this notebook, we used the Test_set_values dataset. We then applied to it the same 	transformations that were carried out in all the past notebooks. And we then applied the 	Decision Tree Classifier model from notebook 02_model_creation to do our final 	predictions on the SubmissionFormat dataset. 
 
 ## Conclusion
 
-After a comprehensive analysis of the different datasets, our research has culminated in targeted recommendations for the company's strategic entry investment in the cinema market. The key findings of our study have highlighted the importance of investing in movies and cinematic traits with a proven high percentage of ROI especially.
+After thoroughly analyzing the datasets using the methodologies outlined in the provided notebooks, we have successfully developed and evaluated two models: a Logistic Regression model and a Decision Tree classifier. The model selection process, detailed in the 02_model_creation notebook, involved comparing these models based on their evaluation metrics, ultimately leading us to select the Decision Tree classifier as the superior model. This Decision Tree model achieved an impressive area under the curve (AUC) of 0.85, making it the optimal choice for our predictions.
 
-Our three primary recommendations are as follows:
-
-1. First business recommendation: Invest in horror movies. 
-
-2. Second business recommendation: Prioritize investment in short films (that have a running time of less than 90 minutes).
-
-3. Third business recommendation: Focus investments on movies that have been directed by: Sujit Mondal.
-
-Please find bellow a more detailed description of them:
-
-1. Invest in horror movies: Data shows that they have more than a 750% on ROI.
-
-![Business Recommendation 1](/visualizations/Business_Recommendation_1.png)
-
-2. Invest in short films: Movies that have a run_time less than 90 minutes have the highest ROI_% and the shortest production budgets.
-
-![Business Recommendation 2](/visualizations/Business_Recommendation_2.png)
-
-3. We would recommend to hire Sujit Mondal as one of the directors. He has directed 7 films, has a ROI of about 25000% and the production budget of the movies he did are almost negligeable. 
-
-![Business Recommendation 3](/visualizations/Business_Recommendation_3.png)
-
-These recommendations aim to provide the board of the company with a data-driven foundation for making informed decisions before deciding which films to create.
+Furthermore, this analysis and predictive model provide policymakers with valuable insights into the number of records necessary for repairing non-functional pumps. By accurately estimating these needs, the model supports more efficient and effective allocation of resources, ensuring that maintenance efforts are directed where they are most needed. This, in turn, will have a significant positive impact on the quality of life for the inhabitants of the areas serviced by these pumps. Ensuring a reliable and consistent water supply is crucial for these communities, and our model aids in achieving this goal by facilitating data-driven decision-making.
 
 ## Author
 
