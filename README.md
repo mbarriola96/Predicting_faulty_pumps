@@ -48,7 +48,17 @@ Four notebooks were created in order to analyze the data and based on that predi
 
 After thoroughly analyzing the datasets using the methodologies outlined in the provided notebooks, we have successfully developed and evaluated two models: a Logistic Regression model and a Decision Tree classifier. The model selection process, detailed in the 02_model_creation notebook, involved comparing these models based on their evaluation metrics, ultimately leading us to select the Decision Tree classifier as the superior model. This Decision Tree model achieved an impressive area under the curve (AUC) of 0.85, making it the optimal choice for our predictions.
 
-Furthermore, this analysis and predictive model provide policymakers with valuable insights into the number of records necessary for repairing non-functional pumps. By accurately estimating these needs, the model supports more efficient and effective allocation of resources, ensuring that maintenance efforts are directed where they are most needed. This, in turn, will have a significant positive impact on the quality of life for the inhabitants of the areas serviced by these pumps. Ensuring a reliable and consistent water supply is crucial for these communities, and our model aids in achieving this goal by facilitating data-driven decision-making.
+The variables that are most important and that permit us to best descriminate are:
+
+    waterpoint_type
+    quantity_group_seasonal
+    quantity_group_enough
+    payment_type
+    quantity_group_insufficient
+
+We are interested in these 5 variables because they are the ones that have the most influence when determining if a pump is functional or non-functional. 
+
+![Feature importance](/visualizations/Feature_importance.png)
 
 ## Author
 
@@ -60,7 +70,7 @@ I am currently working in the microchip industry and further expanding my skills
 
 ## Technologies
 
-I have used **Python** with Jupyter notebook and I have also used **Tableau** to represent the business insight results.
+I have used **Python** with Jupyter notebook.
 
 ## Project Status
 
@@ -68,7 +78,7 @@ The project is in a development process at this moment.
 
 ## What to find in the repository
 
-There is a folder called notebook that contains all the necessary analysis.
+There is a folder called notebooks that contains all the necessary analysis.
 
 There is a requirements.txt that contains the information of the libraries used in this project.
 
