@@ -50,11 +50,11 @@ After thoroughly analyzing the datasets using the methodologies outlined in the 
 
 The variables that are most important and that permit us to best descriminate are:
 
-    waterpoint_type
-    quantity_group_seasonal
-    quantity_group_enough
-    payment_type
-    quantity_group_insufficient
+1. waterpoint_type
+2. quantity_group_seasonal
+3. quantity_group_enough
+4. payment_type
+5. quantity_group_insufficient
 
 We are interested in these 5 variables because they are the ones that have the most influence when determining if a pump is functional or non-functional. 
 
