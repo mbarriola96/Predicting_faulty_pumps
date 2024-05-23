@@ -56,9 +56,22 @@ The variables that are most important and that permit us to best descriminate ar
 4. payment_type
 5. quantity_group_insufficient
 
-We are interested in these 5 variables because they are the ones that have the most influence when determining if a pump is functional or non-functional. 
-
 ![Feature importance](/visualizations/Feature_importance.png)
+
+
+Considering that we used a one-hot encoder and that the categories for each variable were treated as independent variables, the three variables that contribute the most to the model are:
+
+1. waterpoint_type
+2. quantity_group
+3. payment_type
+
+Our three primary recommendations are as follows:
+
+1. The Tanzanian government should consider aligning the payment plans of water pumps with the more common monthly or per bucket payment plans used by most functional pumps to increase their chances of being functional.
+
+2. Using the presence of dry pumps as an indicator can help identify non-functional pumps, allowing efforts to be focused on repairing these specific pumps.
+
+3. Identifying pumps that do not have common functional waterpoint types (such as cattle trough, communal standpipe, etc.) can serve as a proxy to determine non-functional pumps and prioritize them for repairs.
 
 ## Author
 
