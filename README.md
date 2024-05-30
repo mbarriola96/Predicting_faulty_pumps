@@ -54,8 +54,7 @@ Moreover, after thoroughly analyzing the datasets using the methodologies outlin
 
 Here we have the confusion matrix of the Decision Tree Classifier model that was selected:
 
-![Confusion Matrix](/visualizations/confusion_matrix_decision_tree_classifier
-.png)
+![Confusion Matrix](/visualizations/confusion_matrix_decision_tree_classifier.png)
 
 As can be seen, the false positive rate (6.72%) is relatively low, meaning fewer resources will be wasted on unnecessary maintenance.
 
