@@ -46,24 +46,27 @@ Four notebooks were created in order to analyze the data and based on that predi
 
 ## Conclusion
 
-After thoroughly analyzing the datasets using the methodologies outlined in the provided notebooks, we have successfully developed and evaluated two models: a Logistic Regression model and a Decision Tree classifier. The model selection process, detailed in the 02_model_creation notebook, involved comparing these models based on their evaluation metrics, ultimately leading us to select the Decision Tree classifier as the superior model. This Decision Tree model achieved an impressive area under the curve (AUC) of 0.85, making it the optimal choice for our predictions.
+Looking into the distribution of the dependent variable. There is clearly no imbalance, as can be seen below:
 
-The variables that are most important and that permit us to best descriminate are:
+![Distribution Functional and Non-functional](/visualizations/bar_graph_target_variable.png)
 
-1. waterpoint_type
-2. quantity_group_seasonal
-3. quantity_group_enough
-4. payment_type
-5. quantity_group_insufficient
+Moreover, after thoroughly analyzing the datasets using the methodologies outlined in the provided notebooks, we have successfully developed and evaluated two models: a Logistic Regression model and a Decision Tree classifier. The model selection process, detailed in the 02_model_creation notebook, involved comparing these models based on their evaluation metrics, ultimately leading us to select the Decision Tree classifier as the superior model. 
 
-![Feature importance](/visualizations/Feature_importance.png)
+Here we have the confusion matrix of the Decision Tree Classifier model that was selected:
 
+![Confusion Matrix](/visualizations/confusion_matrix_decision_tree_classifier
+.png)
 
-Considering that we used a one-hot encoder and that the categories for each variable were treated as independent variables, the three variables that contribute the most to the model are:
+As can be seen, the false positive rate (6.72%) is relatively low, meaning fewer resources will be wasted on unnecessary maintenance.
+
+Another metric that we considered to select our model was the area under the curve (AUC). The Decision Tree model achieved an impressive AUC of 0.85, making it the optimal choice for our predictions. The variables that are most important and that permit us to best descriminate are:
 
 1. waterpoint_type
 2. quantity_group
 3. payment_type
+
+![Feature importance](/visualizations/Feature_importance.png)
+
 
 Our three primary recommendations are as follows:
 
