@@ -44,6 +44,10 @@ Four notebooks were created in order to analyze the data and based on that predi
 
 	In this notebook, we used the Test_set_values dataset. We then applied to it the same 	transformations that were carried out in all the past notebooks. And we then applied the 	Decision Tree Classifier model from notebook 02_model_creation to do our final 	predictions on the SubmissionFormat dataset. 
 
+- 5. 04_primary_notebook.
+
+	In this notebook, there is a high level overview of all the steps carried out in this 	project in order to do train and test our model. Moreover, the notebooks contains the 	links to the different notebooks in case the reader wants a deeper understanding of the 	processes. 
+
 ## Conclusion
 
 Looking into the distribution of the dependent variable. There is clearly no imbalance, as can be seen below:
