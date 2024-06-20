@@ -97,7 +97,7 @@ The project is in a development process at this moment.
 
 ## What to find in the repository
 
-There is a folder called notebooks that contains all the necessary analysis.
+There is a folder called notebooks that contains all the used notebooks and a python file named project_functions.py. This file is used to store all the functions that were created in this project.
 
 There is a requirements.txt that contains the information of the libraries used in this project.
 
