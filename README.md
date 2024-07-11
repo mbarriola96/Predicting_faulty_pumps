@@ -77,7 +77,7 @@ Our three primary recommendations are as follows:
 
 2. Using the presence of dry pumps as an indicator can help identify non-functional pumps, allowing efforts to be focused on repairing these specific pumps.
 
-3. Identifying pumps that do not have common functional waterpoint types (such as cattle trough, communal standpipe, etc.) can serve as a proxy to determine non-functional pumps and prioritize them for repairs.
+3. We recommend investing in communal standpipe multiple access points as they best detect pump functionality. 
 
 ## Author
 
