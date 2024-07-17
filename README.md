@@ -38,11 +38,11 @@ Four notebooks were created in order to analyze the data and based on that predi
 
 - 3. 02_model_creation.
 
-	In this notebook, we imported the transformed data from notebook 01_data_preprocessing 	to create our models. We firstly did 2 baselines models (a Logistic Regression one and a 	Decission Tree Classifier). We then, we hypertuned the parameters for both models. And 	at the end we chose to go with the decision tree as our final model. 
+	In this notebook, we imported the transformed data from notebook 01_data_preprocessing 	to create our models. We firstly did 2 baselines models (a Logistic Regression one and a 	Decission Tree Classifier). We then, we hypertuned the parameters for both models. And 	at the end we chose to go with the Decision Tree Classifier as our final model. 
 
 - 4. 03_predict.
 
-	In this notebook, we used the Test_set_values dataset. We then applied to it the same 	transformations that were carried out in all the past notebooks. And we then applied the 	Decision Tree Classifier model from notebook 02_model_creation to do our final 	predictions on the SubmissionFormat dataset. 
+	In this notebook, we used the Test_set_values dataset. We then applied to it the same 	transformations that were carried out in all the past notebooks. And we then applied the 	Decision Tree Classifier from notebook 02_model_creation to do our final 	predictions on the SubmissionFormat dataset. 
 
 - 5. 04_primary_notebook.
 
@@ -54,30 +54,28 @@ Looking into the distribution of the dependent variable. There is clearly no imb
 
 ![Distribution Functional and Non-functional](/visualizations/bar_graph_target_variable.png)
 
-Moreover, after thoroughly analyzing the datasets using the methodologies outlined in the provided notebooks, we have successfully developed and evaluated two models: a Logistic Regression model and a Decision Tree classifier. The model selection process, detailed in the 02_model_creation notebook, involved comparing these models based on their evaluation metrics, ultimately leading us to select the Decision Tree classifier as the superior model. 
+Moreover, after thoroughly analyzing the datasets using the methodologies outlined in the provided notebooks, we have successfully developed and evaluated two models: a Logistic Regression model and a Decision Tree Classifier. The model selection process, detailed in the 02_model_creation notebook, involved comparing these models based on their Recall metric, ultimately leading us to select the Decisión Tree Classifier as the superior model. 
 
-Here we have the confusion matrix of the Decision Tree Classifier model that was selected:
+Here we have the confusion matrix of the Decisión Tree Classifier that was selected:
 
 ![Confusion Matrix](/visualizations/confusion_matrix_decision_tree_classifier.png)
 
-As can be seen, the false positive rate (6.72%) is relatively low, meaning fewer resources will be wasted on unnecessary maintenance.
+As can be seen, the false positive rate (14.48%) is relatively low, meaning fewer resources will be wasted on unnecessary maintenance.
 
-Another metric that we considered to select our model was the area under the curve (AUC). The Decision Tree model achieved an impressive AUC of 0.85, making it the optimal choice for our predictions. The variables that are most important and that permit us to best descriminate are:
+Another metric that we considered to select our model was the area under the curve (AUC). The Decisión Tree Classifier achieved an impressive AUC of 0.87, making it the optimal choice for our predictions. The variables that are most important and that permit us to best descriminate are:
 
-1. waterpoint_type
-2. quantity_group
-3. payment_type
+1. waterpoint_type (this variable represents the kind of waterpoint)
+2. quantity_group (this variable represents the quantity of water)
+3. payment_type (this variable represents the method used to pay for the pump)
 
 ![Feature importance](/visualizations/Feature_importance.png)
 
 
 Our three primary recommendations are as follows:
 
-1. The Tanzanian government should consider aligning the payment plans of water pumps with the more common monthly or per bucket payment plans used by most functional pumps to increase their chances of being functional.
-
-2. Using the presence of dry pumps as an indicator can help identify non-functional pumps, allowing efforts to be focused on repairing these specific pumps.
-
-3. We recommend investing in communal standpipe multiple access points as they best detect pump functionality. 
+1. Considering that most of the functional pumps have monthly payment plans or a per bucket, the Tanzanian government can consider modifying the existing payment plans of those pumps where the payments are different from those payment types, so that the chance of the pump being functional can be increased.
+2. Considering that almost none of the functional pumps are dry, it is possible to verify which pumps are dry as a proxy variable to know if they are functional or not and thus focus efforts on repairing them.
+3. Considering that non-functional pumps have in most cases a waterpoint_type different from cattle trough, communal standpipe, communal standpipe multiple, dam, hand pump and improved spring, it is possible to verify which pumps do not have these waterpoint_types as a proxy variable to know if they are functional or not and thus focus efforts on repairing them.
 
 ## Author
 
