@@ -60,9 +60,9 @@ Here we have the confusion matrix of the Decisión Tree Classifier that was sele
 
 ![Confusion Matrix](/visualizations/confusion_matrix_decision_tree_classifier.png)
 
-As can be seen, the false positive rate (14.48%) is relatively low, meaning fewer resources will be wasted on unnecessary maintenance.
+As can be seen, a negative rate of 21.19% in predicting a faulty pump in Tanzania significantly reduces the chances of not fixing non-functional pumps, thereby ensuring the well-being and secure water supply for population areas in Tanzania
 
-Another metric that we considered to select our model was the area under the curve (AUC). The Decisión Tree Classifier achieved an impressive AUC of 0.87, making it the optimal choice for our predictions. The variables that are most important and that permit us to best descriminate are:
+Another metric that we considered to select our model was the area under the curve (AUC). The Decision Tree Classifier achieved an impressive AUC of 0.87, making it the optimal choice for our predictions. The variables that are most important and that permit us to best descriminate are:
 
 1. waterpoint_type (this variable represents the kind of waterpoint)
 2. quantity_group (this variable represents the quantity of water)
