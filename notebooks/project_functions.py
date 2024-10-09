@@ -1,9 +1,26 @@
+from collections import Counter
+from nltk.stem import WordNetLemmatizer
+from sklearn.preprocessing import LabelEncoder
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from sklearn.metrics import classification_report, confusion_matrix
+from nltk.corpus import wordnet
+import category_encoders as ce
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import re
 import seaborn as sns
-import re  # Import regular expressions library
+import nltk
+import matplotlib.pyplot as plt
+%matplotlib inline
+import warnings
 
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+
+# Suppress all warnings
+warnings.simplefilter('ignore')
 
 def categorize_funder(funder):
     """
